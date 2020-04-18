@@ -1,0 +1,70 @@
+.composition {
+  position: relative;
+
+  /* 
+    why we use all these percentages here?
+    It's because of responsive web design with flexible images.
+    You always have to define the width
+    of images in percentages if possible.
+    This way, it will nicely scale with the view port.
+  */
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 0.3rem;
+    position: absolute;
+    z-index: 5;
+    outline-offset: 2rem;
+    transition: all 0.2s;
+
+    @include respond(tab-port) {
+      width: 33.333333%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    }
+
+    &--p1 {
+      left: 0;
+      top: -2.5rem;
+
+      @include respond(tab-port) {
+        left: 5%;
+        top: -2.5rem;
+      }
+    }
+
+    &--p2 {
+      right: 0;
+      top: 2rem;
+
+      @include respond(tab-port) {
+        right: 5%;
+        top: -2.5rem;
+      }
+    }
+
+    &--p3 {
+      left: 20%;
+      top: 10rem;
+
+      @include respond(tab-port) {
+        left: 33.333333%;
+        top: -4rem;
+        transform: scale(1.15);
+      }
+    }
+
+    &:hover {
+      outline: 1.5rem solid $color-primary;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 10;
+    }
+  }
+
+  // composition:hover composition__photo:not(:hover)
+  // When we hover the composition, we select
+  // the composition photo which is not hovered.
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}

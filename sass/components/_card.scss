@@ -1,0 +1,238 @@
+.card {
+  // CARD FUNCTIONALITY EFFECT
+  // lower value more dramatic effect, to high value almost no effect
+  perspective: 150rem;
+  position: relative;
+  height: 52rem;
+
+  &__side {
+    background-color: $color-white;
+    height: 52rem;
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light-2,
+          $color-primary-light
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary,
+          $color-primary-dark 80%
+        );
+      }
+    }
+  }
+
+  // .card:hover .card__side
+  // when we hover the card the card__side will be transformed.
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  // CARD FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen; // can play around with more of these
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 82.6%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 82.6%, 0 100%);
+    // border
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light-2,
+          $color-primary-light
+        ),
+        url(../img/card-1.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary
+        ),
+        url(../img/card-2.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary,
+          $color-primary-dark 70%
+        ),
+        url(../img/card-3.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light-2, 0.85),
+        rgba($color-primary-light, 0.85) 60%
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary, 0.85) 80%
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.85),
+        rgba($color-primary-dark, 0.85) 80%
+      );
+    }
+  }
+
+  &__details {
+    padding-top: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; // horizontally align the item in the center of the parent element.
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 0.1rem solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  // CARD BACK SIDE STYLING
+  &__call-to-action {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__demo-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__demo-text {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__demo-arrow {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+
+  //@include respond(tab-port) {
+  // In some cases with touch devices the user has a width above tab-port, which wont give them the card flip.
+  // This gives touch devices the same effect as screens belove tab-land.
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    // CARD FUNCTIONALITY EFFECT
+    height: auto;
+    border-radius: 0.3rem;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        -webkit-clip-path: polygon(0 17.4%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 17.4%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    // .card:hover .card__side
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    // CARD BACK SIDE STYLING
+    &__call-to-action {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__demo-box {
+      margin-bottom: 3rem;
+    }
+
+    &__demo-arrow {
+      font-size: 4rem;
+    }
+  }
+}

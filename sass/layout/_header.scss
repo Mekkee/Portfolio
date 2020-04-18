@@ -1,0 +1,78 @@
+/*
+95vh = 95% of the full viewport height.
+What background-size: cover; does is that whatever the width of the viewport, 
+or the element, it'll always try to fit the element inside of the box.
+clip-path: polygon() starts from top left corner and moves clockwise.
+x-axis = horizontal, y-axis = vertical
+*/
+
+.header {
+  height: 85vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero-ideas.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    height: 95vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 78.6vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 78.6vh, 0 100%);
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    height: 95vh;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 1),
+      rgba($color-primary-dark, 1)
+    );
+  }
+
+  @include respond(tab-land) {
+    height: 85vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 78.6vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 78.6vh, 0 100%);
+  }
+
+  @include respond(tab-port) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 78.6vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 78.6vh, 0 100%);
+  }
+
+  @include respond(phone) {
+    height: 84vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 78.6vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 78.6vh, 0 100%);
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+  /* 
+    Only need to specify the height, 
+    and the width will be automatically figured out by the browser
+  */
+  &__logo {
+    height: 3.5rem;
+  }
+  /* 
+    transform: translate(-50%, -50%) can be used to target the center of the box.
+  */
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

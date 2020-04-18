@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/AZ-logo-medium.png" />
+
+    <title>Alexander | FrontEnd Developer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon"><!-- &nbsp; --></span>
+        </label>
+
+        <div class="navigation__background"><!-- &nbsp; --></div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#home" class="navigation__link"><span>01</span>Home</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#about" class="navigation__link"><span>02</span>About</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#skillset" class="navigation__link"
+                ><span>03</span>Skillset</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#projects" class="navigation__link"
+                ><span>04</span>Projects</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#blog" class="navigation__link"><span>05</span>Blog</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#contact" class="navigation__link"
+                ><span>06</span>Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <header class="header" id="home">
+        <div class="header__text-box">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">Alexander</span>
+            <span class="heading-primary--sub">FrontEnd Developer</span>
+          </h1>
+
+          <a href="#about" class="btn btn--white btn--animated">Learn more</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="section-about">
+          <div class="u-margin-bottom-medium" id="about">&nbsp;</div>
+          <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+              Profile & Career Goals
+            </h2>
+          </div>
+
+          <div class="row">
+            <div class="col-1-of-2">
+              <h3 class="heading-tertiary u-margin-bottom-small">Profile</h3>
+              <p class="paragraph">
+                I’m Alex. During most of my professional life I've been working
+                to produce creative solutions to increase efficiency to simplify
+                the environment around me. As a developer I can offer you my
+                creative problem solving and detail-oriented skills together
+                with 1 ½ years experience in App & Web development.
+              </p>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Career Goals
+              </h3>
+              <p class="paragraph">
+                My developer goals are pretty simple and similar to the rest of
+                my goals; constantly evolve and welcome challenges, learn new
+                things, experiment and have a good time while doing it.
+              </p>
+
+              <a
+                href="img/AlexanderZaierResume-en.pdf"
+                download="AlexanderZaierResume"
+                class="btn-text"
+                title="Download AlexanderZaierResume.pdf"
+                >Download Resumé.pdf &rarr;</a
+              >
+            </div>
+            <div class="col-1-of-2">
+              <div class="composition">
+                <img
+                  srcset="
+                    img/profile-1-medium.jpg  300w,
+                    img/profile-1-large.jpg  1000w
+                  "
+                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                  class="composition__photo composition__photo--p1"
+                  src="img/profile-1-large.jpg"
+                  alt="Photo 1"
+                />
+                <img
+                  srcset="
+                    img/profile-3-medium.jpg  300w,
+                    img/profile-3-large.jpg  1000w
+                  "
+                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                  class="composition__photo composition__photo--p2"
+                  src="img/profile-3-large.jpg"
+                  alt="Photo 2"
+                />
+                <img
+                  srcset="
+                    img/profile-2-medium.jpg  300w,
+                    img/profile-2-large.jpg  1000w
+                  "
+                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                  class="composition__photo composition__photo--p3"
+                  src="img/profile-2-large.jpg"
+                  alt="Photo 3"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-skillsets" id="skillset">
+          <div class="row">
+            <div class="col-1-of-4">
+              <div class="skillset-box">
+                <i class="skillset-box__icon fab fa-js"></i>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  JavaScript
+                </h3>
+                <p class="skillset-box__text">
+                  Staying up to date with the latest standards of ECMAScript
+                </p>
+              </div>
+            </div>
+
+            <div class="col-1-of-4">
+              <div class="skillset-box">
+                <i class="skillset-box__icon fab fa-html5"></i>
+                <i class="skillset-box__icon fab fa-css3-alt"></i>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  HTML & CSS
+                </h3>
+                <p class="skillset-box__text">
+                  Always looking for new tricks & animations to improve UI/UX
+                </p>
+              </div>
+            </div>
+
+            <div class="col-1-of-4">
+              <div class="skillset-box">
+                <i class="skillset-box__icon fab fa-react"></i>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  React.js
+                </h3>
+                <p class="skillset-box__text">
+                  Currently focused on React & React Native and features like
+                  Hooks
+                </p>
+              </div>
+            </div>
+
+            <div class="col-1-of-4">
+              <div class="skillset-box">
+                <i class="skillset-box__icon fab fa-node-js"></i>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  Node.js
+                </h3>
+                <p class="skillset-box__text">
+                  To become proficient in the entire JS echo system Node is a
+                  key tool to study
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-projects">
+          <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+              Projects
+            </h2>
+            <div id="projects"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-1-of-3">
+              <div class="card">
+                <div class="card__side card__side--front">
+                  <div class="card__picture card__picture--1">
+                    &nbsp;
+                    <!-- &nbsp; === HTML non-breaking space -->
+                  </div>
+                  <h4 class="card__heading">
+                    <span class="card__heading-span card__heading-span--1">
+                      Digital News Matcher
+                    </span>
+                  </h4>
+                  <div class="card__details">
+                    <ul>
+                      <li>App Developed with:</li>
+                      <li>React Native</li>
+                      <li>Tesseract OCR</li>
+                      <li>Development OS: Linux</li>
+                      <li>Target OS: Android</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card__side card__side--back card__side--back-1">
+                  <div class="card__call-to-action">
+                    <div class="card__demo-box">
+                      <p class="card__demo-text">Checkout demo + source code</p>
+                      <p class="card__demo-arrow">&darr;</p>
+                    </div>
+                    <a href="#popup" class="btn btn--white">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-1-of-3">
+              <div class="card">
+                <div class="card__side card__side--front">
+                  <div class="card__picture card__picture--2">
+                    &nbsp;
+                    <!-- &nbsp; === HTML non-breaking space -->
+                  </div>
+                  <h4 class="card__heading">
+                    <span class="card__heading-span card__heading-span--2">
+                      Portfolio
+                    </span>
+                  </h4>
+                  <div class="card__details">
+                    <ul>
+                      <li>Web Developed with:</li>
+                      <li>HTML5</li>
+                      <li>CSS3 & Sass</li>
+                      <li>Responsive Design</li>
+                      <li>Animations</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card__side card__side--back card__side--back-2">
+                  <div class="card__call-to-action">
+                    <div class="card__demo-box">
+                      <p class="card__demo-text">Checkout demo + source code</p>
+                      <p class="card__demo-arrow">&darr;</p>
+                    </div>
+                    <a href="#popup" class="btn btn--white">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-1-of-3">
+              <div class="card">
+                <div class="card__side card__side--front">
+                  <div class="card__picture card__picture--3">
+                    &nbsp;
+                    <!-- &nbsp; === HTML non-breaking space -->
+                  </div>
+                  <h4 class="card__heading">
+                    <span class="card__heading-span card__heading-span--3">
+                      BioBio Cinema Experience
+                    </span>
+                  </h4>
+                  <div class="card__details">
+                    <ul>
+                      <li>Web Developed with:</li>
+                      <li>HTML5 & CSS3</li>
+                      <li>Responsive Design</li>
+                      <li>Animations</li>
+                      <li>School Course Project</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card__side card__side--back card__side--back-3">
+                  <div class="card__call-to-action">
+                    <div class="card__demo-box">
+                      <p class="card__demo-text">Checkout demo + source code</p>
+                      <p class="card__demo-arrow">&darr;</p>
+                    </div>
+                    <a href="#popup" class="btn btn--white">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="u-center-text u-margin-top-huge">
+            <a
+              target="_blank"
+              href="https://github.com/Mekkee"
+              class="btn btn--green"
+              >Github Profile</a
+            >
+          </div>
+        </section>
+
+        <section class="section-blog">
+          <div class="bg-gif">
+            <!-- <video class="bg-video__content" autoplay muted loop playsinline>
+            <source src="img/rocket.mp4" type="video/mp4" />
+            <source src="img/rocket.webm" type="video/webm" />
+            Your browser does not support video foramt mp4 or webm!
+          </video> -->
+            <img
+              src="img/animated-space.gif"
+              alt="space"
+              class="bg-gif__content"
+            />
+          </div>
+
+          <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+              Blog posts
+            </h2>
+            <div class="u-margin-top-medium" id="blog"></div>
+          </div>
+
+          <div class="row">
+            <div class="post">
+              <figure class="post__shape">
+                <img
+                  src="img/react-native-space-logo.jpg"
+                  alt="Person on a tour"
+                  class="post__img"
+                />
+                <figcaption class="post__caption">Alex Zaier</figcaption>
+              </figure>
+              <div class="post__text">
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  How to setup a React Native CLI enviorment for Android & Linux
+                </h3>
+                <p class="paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea,
+                  perspiciatis voluptas molestias sapiente, animi officiis
+                  provident ducimus, illo et vero facere blanditiis
+                  necessitatibus aspernatur. Fugiat?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="post">
+              <figure class="post__shape">
+                <img
+                  src="img/ocr-logo.jpg"
+                  alt="Person on a tour"
+                  class="post__img"
+                />
+                <figcaption class="post__caption">Alex Zaier</figcaption>
+              </figure>
+              <div class="post__text">
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  Tesseract OCR vs ML Kit for Firebase
+                </h3>
+                <p class="paragraph">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aliquid quasi eligendi dicta distinctio aperiam, eveniet,
+                  facilis similique quos, quam quas quidem pariatur natus enim
+                  deleniti.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="u-center-text u-margin-top-huge">
+            <a href="#" class="btn-text">Read more posts &rarr;</a>
+          </div>
+        </section>
+
+        <!-- <section class="section-message">
+        <div class="row">
+          <div class="message">
+            <div class="message__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">
+                    Contact Me
+                  </h2>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full name"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full Name</label>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email Adress"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label">Email Adress</label>
+                </div>
+
+                <div class="form__group u-margin-bottom-medium">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="small"
+                      name="size"
+                    />
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Small Project
+                    </label>
+                  </div>
+
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="large"
+                      name="size"
+                    />
+                    <label for="large" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Large Project
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <button class="btn btn--green">Next step &rarr;</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      </main>
+
+      <footer class="footer" id="contact">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-footer">
+            Contact
+          </h2>
+          <div class="u-margin-top-medium" id="contact"></div>
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="footer__navigation">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#home" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#about" class="footer__link">About</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#skillset" class="footer__link">Skillset</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#projects" class="footer__link">Projects</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#blog" class="footer__link">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <div class="footer__navigation">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/alexander-zaier/"
+                    class="footer__link"
+                    title="https://www.linkedin.com/in/alexander-zaier/"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a
+                    href="img/AlexanderZaierResume-en.pdf"
+                    download="AlexanderZaierResume"
+                    class="footer__link"
+                    title="AlexanderZaierResume"
+                    >Download CV</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a
+                    target="_blank"
+                    href="https://github.com/Mekkee"
+                    class="footer__link"
+                    title="https://github.com/Mekkee"
+                    >GitHub</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a
+                    href="mailto:aleexzaier@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer__link"
+                    title="mailto:aleexzaier@gmail.com"
+                    >Email</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="popup" id="popup">
+        <div class="popup__content">
+          <div class="popup__bg">
+            <img
+              src="https://media.giphy.com/media/Uv0VUrAT6FtMQ/giphy.gif"
+              alt="code gif"
+              class="popup__img"
+            />
+            <a href="#projects" class="popup__close">&times;</a>
+            <div class="popup__btn-repository">
+              <a
+                target="_blank"
+                href="https://github.com/Mekkee?tab=repositories"
+                class="btn btn--green"
+                >Repository</a
+              >
+            </div>
+          </div>
+          <!-- <a href="#projects" class="popup__close">&times;</a>
+          <a href="#" class="btn btn--green">Repository</a> -->
+        </div>
+
+        <a href="#projects" class="popup__close--outer">&nbsp;</a>
+      </div>
+    </div>
+  </body>
+  <script src="js/app.js"></script>
+</html>

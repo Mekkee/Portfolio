@@ -1,0 +1,58 @@
+.footer {
+  background-color: $color-grey-dark-3;
+  padding: 10rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $color-grey-light-1;
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
+  &__navigation {
+    border-top: 0.1rem solid $color-grey-dark;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      background-color: $color-grey-dark-3;
+      color: $color-grey-light-1;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      //color: $color-primary;
+      /* box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+      transform: rotate(5deg) scale(1.2); */
+      transform: translateY(-0.5rem) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+    }
+  }
+}

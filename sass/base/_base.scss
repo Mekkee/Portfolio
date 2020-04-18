@@ -1,0 +1,93 @@
+/* 
+  By default, browsers apply a certain margin or padding to some elements.
+  This allows us basically to start clean,
+  without the browser adding any margins or paddings
+  that we don't want to our elements.
+
+  If you're not familiar with box-sizing: border-box,
+  what it does is to change the box model,
+  so that the borders and the paddings are no longer added,
+  to the total width or the total height,
+  that we specify for a box.
+  Without this, any paddings and borders are 
+  added to the height or the width of an element.
+  Since we want to use inheritance we declare it at the universal reset,
+  and the border-sizing: border-box; inside the body.
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  //box-sizing: border-box;
+  box-sizing: inherit;
+}
+/* 
+  Next, let's set some overall font properties
+  for the entire webpage.
+  We're going to do it root selector.
+  And why do we do it this way?
+  Well, we do it because the properties related to font
+  are usually inherited,
+  so we're using the power of inheritance here.
+  Since we are using rems to simplify the media queries, etc.
+  We want to work with easy numbers to skip alot of calculations in our code.
+  font-size:10px; makes it easy to calculate the rem (1rem = the exact root font-size, standard 16px),
+  since we only need to divide the px with 10 to get the rem value.
+  But by setting it to a px value,
+  users that want to increase the default font-size in their browser wont see a change.
+  Thats why we're setting the font-size in a percentages.
+  If default is 16, 10/16=62.5, 0.625x16=10, therefore 62.5%.
+
+  Everything else related to font we always specify it here in the body selector.
+
+  Looking back to writing the media queries, 
+  setting the measurements in rems instead of px saved me ALOT if time.
+  We can just change the font size here to change the entire layouts measurements,
+  instead of rewriting all the pixels to smaller numbers...
+*/
+html {
+  // this defines 1rem
+  font-size: 62.5%; // 1rem = 10px 10/16=0.62.5 ~ 62.5%
+  /* CSS Smooth Scroll */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  // Larger Media queries before smaller ones, code run downwards so it will ignore previous selectors if they have the same specificity.
+
+  @include respond(big-desktop) {
+    // width > 1800
+    font-size: 75%; // 1rem = 12px 12/16=75 ~ 0.75%
+  }
+
+  @include respond(tab-land) {
+    // width < 1200
+    font-size: 56.25%; // 1rem = 9px 9/16=0.5625 ~ 56.25%
+  }
+
+  @include respond(tab-port) {
+    // width < 900
+    font-size: 50%; // 1rem = 8px 8/16=0.5 ~ 50%
+    overflow-y: auto;
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  box-sizing: border-box;
+
+  @include respond(tab-port) {
+    // width < 900
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
