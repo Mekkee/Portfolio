@@ -25,9 +25,19 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
 
-    @include respond(phone) {
-      letter-spacing: 1rem;
+    @include respond(tab-land) {
+      letter-spacing: 2.2rem;
+      font-size: 6rem;
+    }
+
+    @include respond(tab-port) {
+      letter-spacing: 2.2rem;
       font-size: 5rem;
+    }
+
+    @include respond(phone) {
+      letter-spacing: 0.75rem;
+      font-size: 3rem;
     }
   }
 
@@ -41,8 +51,17 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
 
+    @include respond(tab-land) {
+      letter-spacing: 1.25rem;
+    }
+
+    @include respond(tab-port) {
+      letter-spacing: 1rem;
+    }
+
     @include respond(phone) {
       letter-spacing: 0.5rem;
+      font-size: $default-font-size;
     }
   }
 }
@@ -68,14 +87,15 @@ body {
   }
 
   @include respond(phone) {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
+    line-height: 1.1;
   }
 
-  &:hover {
+  /* &:hover {
     //transform: skewY(2deg) skewX(15deg) scale(1.1);
     transform: translateY(-0.5rem) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
-  }
+  } */
 }
 
 .heading-tertiary {
@@ -112,8 +132,8 @@ body {
     font-size: 2.5rem;
   }
 
-  &:hover {
+  /* &:hover {
     transform: translateY(-0.5rem) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
-  }
+  } */
 }

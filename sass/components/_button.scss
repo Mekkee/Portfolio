@@ -43,11 +43,19 @@
   }
 
   &--green {
-    background-color: $color-primary;
+    background-image: linear-gradient(
+      to right top,
+      $color-primary-light,
+      $color-primary-dark
+    );
     color: $color-white;
 
     &::after {
-      background-color: $color-primary;
+      background-image: linear-gradient(
+        to right top,
+        $color-primary-light,
+        $color-primary-dark
+      );
     }
   }
   /* 
